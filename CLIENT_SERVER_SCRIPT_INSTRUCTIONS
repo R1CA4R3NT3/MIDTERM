@@ -1,0 +1,36 @@
+To execute two Python scripts, SERVER_CODE and CLIENT_CODE and interact, follow these steps:
+
+Save the Server and Client Scripts Separately
+Create two Python files:
+
+Run SERVER_CODE.py first
+Open a terminal or command prompt, navigate to the folder where SERVER_CODE.py is saved, and run:
+
+
+python SERVER_CODE.py
+
+
+Observe:
+
+Server listening on host 127.0.0.1:port 65432...
+
+Script is now waiting for a client connection.
+
+
+In a Second Terminal, Run the CLIENT_CODE.py
+Open a new terminal window or tab, navigate to the folder where CLIENT_CODE.py is saved, and run:
+
+CLIENT_CODE.py
+
+Obersve:
+
+Connected to server at host 127.0.0.1:port 65432...
+Received from server: Hello, Server!
+Client shutdown complete.
+
+Observer Server window:
+
+Connected by address ('127.0.0.1', 50112)
+Received from client: Hello, Server!
+Client disconnected.
+Server socket closed.
