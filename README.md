@@ -1,4 +1,4 @@
-I'm a student at National University, 
+I am a student at National University, 
 School of Engineering and Computing, BS Cybersecurity Program
 Currently exploring Python, web development, and computer networking.  
 Always looking for ways to build cool projects and sharpen my skills.  
