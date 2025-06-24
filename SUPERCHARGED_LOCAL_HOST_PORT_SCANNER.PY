@@ -11,6 +11,7 @@ logging.basicConfig(
     format='[%(asctime)s] %(message)s',
 )
     
+def scan_port(host, port, open_ports):
 """
     Scans ports in a given range on the local host.
 
@@ -22,7 +23,6 @@ logging.basicConfig(
     Returns:
         list: Open ports found during the scan.
 """
-def scan_port(host, port, open_ports):
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
         sock.settimeout(0.2)
         try:
@@ -41,6 +41,14 @@ def scan_ports(host, start_port, end_port):
     print(f"\nScanning {host} from port {start_port} to {end_port}...")
     open_ports = []
     threads = []
+
+# Validate port range
+    if not (0 <= start_port <= 65535 and 0 <= end_port <= 65535):
+        print(f"[ERROR] Invalid port numbers. Must be in range 0-65535.")
+        return open_ports
+    if start_port > end_port:
+        print(f"[ERROR] Start port must not be greater than end port.")
+        return open_ports
 
 # Error handling for unreachable hosts.
 # Error handling for invalid port numbers.
